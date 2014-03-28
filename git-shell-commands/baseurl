@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# This script returns host's base URL and is used by other scripts.
+# "/" included.
+# Modify accordingly.
+
+echo "ssh://git@dword1511.info:8086/home/git/"
+

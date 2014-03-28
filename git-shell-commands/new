@@ -1,6 +1,9 @@
 #!/bin/sh
 
+cd
+
 SELF=`basename $0`
+BASE=`./git-shell-commands/baseurl`
 
 if [ -z "$1" ]
 then
@@ -13,7 +16,6 @@ then
   exit 1
 fi
 
-cd
 if [ -e "$1.git" ]
 then
   echo "$1 already exists."
@@ -25,5 +27,5 @@ cd "$1.git"
 git --bare init
 rm -f hooks/*.sample
 echo "$SELF: done."
-echo "Your repo address: ssh://git@dword1511.info:8086/home/git/$1.git"
+echo "Your repo address: $BASE$1.git"
 

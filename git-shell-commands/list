@@ -1,4 +1,14 @@
 #!/bin/sh
 
 cd
-ls -1d *.git
+
+BASE=`git-shell-commands/baseurl`
+
+for item in *.git
+do
+  if [ -d $item ]
+  then
+    echo "  $BASE$item"
+  fi
+done
+
