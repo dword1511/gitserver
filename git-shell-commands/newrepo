@@ -1,0 +1,28 @@
+#!/bin/sh
+
+SELF=`basename $0`
+
+if [ -z "$1" ]
+then
+  echo "$SELF: add a git repository."
+  echo
+  echo "Usage:"
+  echo "    $SELF name_of_repo"
+  echo
+  echo "\".git\" will be automatically appended."
+  exit 1
+fi
+
+cd
+if [ -e "$1.git" ]
+then
+  echo "$1 already exists."
+  exit 1
+fi
+
+mkdir "$1.git"
+cd "$1.git"
+git --bare init
+echo "$SELF: done."
+echo "Your repo address: ssh://git@dword1511.info:8086/home/git/$1.git"
+

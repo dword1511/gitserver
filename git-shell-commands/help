@@ -1,0 +1,9 @@
+#!/bin/sh
+cd
+echo
+echo "Possible commands:"
+echo
+ls -1 git-shell-commands
+echo "exit"
+echo
+

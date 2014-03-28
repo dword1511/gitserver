@@ -1,0 +1,26 @@
+#!/bin/sh
+
+SELF=`basename $0`
+
+if [ -z "$1" ]
+then
+  echo "$SELF: repack objects in a git repository."
+  echo
+  echo "Usage:"
+  echo "    $SELF name_of_repo"
+  echo
+  echo "\".git\" will be automatically appended."
+  exit 1
+fi
+
+cd
+if [ -d "$1.git" ]
+then
+  cd "$1.git"
+  git gc
+  echo "$SELF: done."
+  exit 0
+else
+  echo "$SELF: repo $1.git not found."
+fi
+

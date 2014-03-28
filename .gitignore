@@ -1,0 +1,7 @@
+.bash*
+.vim*
+.cache
+.ssh
+*.git
+.gitconfig
+
