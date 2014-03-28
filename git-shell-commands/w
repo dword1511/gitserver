@@ -1,0 +1,11 @@
+#!/bin/sh
+cd
+
+echo
+echo "This git service has" `cat .ssh/authorized_keys | cut -d " " -f 4 | uniq | wc -l` "users:"
+echo
+
+cat .ssh/authorized_keys | cut -d " " -f 4 | uniq
+
+echo
+
