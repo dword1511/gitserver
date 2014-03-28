@@ -23,6 +23,7 @@ fi
 mkdir "$1.git"
 cd "$1.git"
 git --bare init
+rm -f hooks/*.sample
 echo "$SELF: done."
 echo "Your repo address: ssh://git@dword1511.info:8086/home/git/$1.git"
 

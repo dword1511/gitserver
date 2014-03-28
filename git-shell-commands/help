@@ -4,6 +4,7 @@ echo
 echo "Possible commands:"
 echo
 ls -1 git-shell-commands
+echo "quit"
 echo "exit"
 echo
 
