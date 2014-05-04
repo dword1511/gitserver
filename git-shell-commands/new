@@ -3,7 +3,7 @@
 cd
 
 SELF=`basename $0`
-BASE=`./git-shell-commands/baseurl`
+BASE=`git-shell-commands/baseurl`
 
 if [ -z "$1" ]
 then

@@ -5,6 +5,9 @@ SELF=`basename $0`
 if [ -z "$1" ]
 then
   echo "$SELF: repack objects in a git repository."
+  echo "       If you are using soft-links to create a HTTP read-only mirror,"
+  echo "       you may need to run this every time the repository is pushed,"
+  echo "       otherwise users on the HTTP repository will not be able to get updates."
   echo
   echo "Usage:"
   echo "    $SELF name_of_repo"
