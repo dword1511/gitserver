@@ -2,7 +2,9 @@
 cd
 
 echo
-echo "This git service has" `cat .ssh/authorized_keys | grep -v "^#" | cut -d " " -f 4 | uniq | wc -l` "users:"
+# wc counts empty lines. We need an alternative approach.
+#echo "This git service has" `cat .ssh/authorized_keys | grep -v "^#" | cut -d " " -f 4 | uniq | wc -l` "users:"
+echo "This git service has the following users:"
 echo
 
 cat .ssh/authorized_keys | grep -v "^#" | cut -d " " -f 4 | uniq
