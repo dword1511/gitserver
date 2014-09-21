@@ -11,7 +11,8 @@ echo "WARNING:"
 echo "This git service is intended for private code sharing only."
 echo "Service is subject to down time, glitches or (easy) security breach."
 echo "********************************************************************************"
-echo "You should be aware that any authorized user can clone, pull or push to any repos hosted here, without there actions being logged."
+echo "You should be aware that any authorized user can clone, pull or push to any"
+echo " repos hosted here, without there actions being logged."
 echo "********************************************************************************"
 echo "Only administrator can remove repos."
 echo
@@ -19,5 +20,11 @@ echo "ABSOLUTELY NO PERSONAL FILES!"
 echo "Please do not use this service as backup or private file storage."
 echo
 echo "This service is provided with ABSOLUTELY NO WARRANTY."
+echo
+USER=`lastlog | grep "^$USER"`
+IP=`echo $USER | cut -d ' ' -f 3`
+DATE=`echo $USER | cut -d ' ' -f 4-`
+echo "Last login: from $IP [$DATE]"
+echo `uptime`
 echo
 
