@@ -1,4 +1,6 @@
 These are files that I used on my private git server.
+You need to enable ssh server, install git-shell and modify git-shell-commands/baseurl so the hostname and port are set properly.
+
 See
   http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server
 and
