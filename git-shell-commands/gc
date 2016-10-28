@@ -20,7 +20,7 @@ cd
 if [ -d "$1.git" ]
 then
   cd "$1.git"
-  git gc --aggressive --prune=now
+  git gc --prune=now
   echo "$SELF: done."
   exit 0
 else
