@@ -4,5 +4,5 @@
 # "/" included.
 # Modify accordingly.
 
-echo "ssh://git@dword1511.info:8086$HOME/"
+echo "ssh://${USER}@dword1511.info:8086${HOME}/"
 

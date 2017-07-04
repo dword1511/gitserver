@@ -23,6 +23,7 @@ then
 fi
 
 mkdir "$1.git"
+chmod 700 "$1.git"
 cd "$1.git"
 git --bare init
 rm -f hooks/*.sample
